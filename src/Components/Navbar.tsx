@@ -38,13 +38,6 @@ const Navbar = () => {
               About
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
             </span>
-            <span
-              className="text-slate-300 hover:text-white transition-colors relative group cursor-pointer"
-              onClick={() => navigate("/contact")}
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
-            </span>
           </div>
 
           <div className="flex items-center space-x-4">

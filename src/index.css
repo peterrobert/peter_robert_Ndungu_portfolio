@@ -107,3 +107,10 @@
 .magnetic:hover {
   transform: translate(2px, -2px);
 }
+
+.progress-bar {
+  background-color: #9333ea;
+  /* Tailwind’s purple-600 */
+  width: 50%;
+  /* Example */
+}
