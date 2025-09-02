@@ -1,4 +1,8 @@
 import photoImage from "../../../public/peter_image.jpg";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import WorkIcon from "@mui/icons-material/Work";
 
 const HomePage = () => {
   return (
@@ -83,17 +87,43 @@ const HomePage = () => {
             </div>
 
             <div className="flex space-x-6 pt-4">
-              <span className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer">
-                <i className="fa-brands fa-github"></i>
+              <span
+                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
+                onClick={() =>
+                  window.open("https://github.com/peterrobert", "_blank")
+                }
+              >
+                <GitHubIcon />
               </span>
-              <span className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer">
-                <i className="fa-brands fa-linkedin"></i>
+              <span
+                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/peterrobertndungu",
+                    "_blank"
+                  )
+                }
+              >
+                <LinkedInIcon />
               </span>
-              <span className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer">
-                <i className="fa-solid fa-envelope"></i>
+              <span
+                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
+                onClick={() =>
+                  window.open("mailto:pwambui93@gmail.com", "_blank")
+                }
+              >
+                <EmailIcon />
               </span>
-              <span className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer">
-                <i className="fa-brands fa-upwork"></i>
+              <span
+                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.upwork.com/freelancers/~01f1e3809fc80b9dd0",
+                    "_blank"
+                  )
+                }
+              >
+                <WorkIcon />
               </span>
             </div>
           </div>
