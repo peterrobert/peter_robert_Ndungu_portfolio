@@ -1,177 +1,67 @@
-import photoImage from "../../../public/peter_image.jpg";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import WorkIcon from "@mui/icons-material/Work";
-
 const HomePage = () => {
   return (
     <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="hero"
+      className="h-[800px] bg-gradient-to-br from-purple-50 to-white flex items-center justify-center relative overflow-hidden"
     >
-      {/* <!-- Background Blobs --> */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 blob animate-float"></div>
-        <div
-          style={{
-            animationDelay: "-2s",
-            background:
-              "radial-gradient(circle, rgba(249, 115, 22, 0.3) 0%, transparent 70%)",
-          }}
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 blob animate-float"
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 blob animate-float"
-          style={{
-            animationDelay: "-4s",
-            background:
-              "radial-gradient(circle, rgba(45, 212, 191, 0.2) 0%, transparent 70%)",
-          }}
-        ></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-32 right-32 w-48 h-48 bg-purple-300 rounded-full opacity-15 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full opacity-10"></div>
       </div>
 
-      {/* <!-- Grid Overlay --> */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* <!-- Left Column - Content --> */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 glass rounded-full px-4 py-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse-dot"></div>
-              <span className="text-sm text-slate-300">
-                Currently building → Feedback Box
-              </span>
-            </div>
-
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
-                Hi, I'm <span className="gradient-text">Peter Robert</span> —
-                Frontend & Full‑Stack Developer.
-              </h1>
-
-              <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                I craft modern, performant web apps with{" "}
-                <span className="text-violet-400 font-medium">
-                  React/Next.js/TypeScript
-                </span>
-                , build APIs with{" "}
-                <span className="text-orange-400 font-medium">
-                  Ruby on Rails
-                </span>
-                , and I'm learning{" "}
-                <span className="text-teal-400 font-medium">Go</span> for
-                scalable backends.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <span className="magnetic bg-gradient-to-r from-violet-500 to-orange-500 text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/25 transition-all cursor-pointer">
-                View Projects
-              </span>
-              <span className="magnetic glass px-8 py-3 rounded-lg font-medium text-slate-200 hover:bg-white/10 transition-all gradient-border cursor-pointer">
-                <div className="gradient-border-inner px-8 py-3 rounded-lg">
-                  Download CV
-                </div>
-              </span>
-            </div>
-
-            <div className="flex space-x-6 pt-4">
-              <span
-                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
-                onClick={() =>
-                  window.open("https://github.com/peterrobert", "_blank")
-                }
-              >
-                <GitHubIcon />
-              </span>
-              <span
-                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/peterrobertndungu",
-                    "_blank"
-                  )
-                }
-              >
-                <LinkedInIcon />
-              </span>
-              <span
-                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
-                onClick={() =>
-                  window.open("mailto:pwambui93@gmail.com", "_blank")
-                }
-              >
-                <EmailIcon />
-              </span>
-              <span
-                className="text-slate-400 hover:text-violet-400 transition-colors text-xl cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://www.upwork.com/freelancers/~01f1e3809fc80b9dd0",
-                    "_blank"
-                  )
-                }
-              >
-                <WorkIcon />
-              </span>
-            </div>
+      <div className="text-center z-10 px-6 max-w-4xl mx-auto">
+        <div className="mb-8">
+          <div className="w-32 h-32 rounded-full bg-gradient-to-r from-purple-primary to-pink-500 p-1 mx-auto mb-6">
+            <img
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg"
+              alt="Peter Robert"
+              className="w-full h-full rounded-full object-cover"
+            />
           </div>
+        </div>
 
-          {/* <!-- Right Column - Photo --> */}
-          <div className="relative">
-            <div className="relative">
-              {/* <!-- Main Photo Container --> */}
-              <div className="gradient-border animate-tilt">
-                <div className="gradient-border-inner p-1">
-                  <div className="glass rounded-xl overflow-hidden shadow-2xl">
-                    <img
-                      className="w-full h-[500px] object-cover"
-                      src={photoImage}
-                      alt="professional portrait of a young Black male software developer from Kenya, confident smile, modern casual attire, clean studio lighting, high quality headshot"
-                    />
-                  </div>
-                </div>
-              </div>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          Hi, I'm{" "}
+          <span className="bg-gradient-to-r from-purple-primary to-pink-500 bg-clip-text text-transparent">
+            Peter Robert
+          </span>
+        </h1>
 
-              {/* <!-- Floating Badges --> */}
-              <div className="absolute -top-4 -right-4 glass rounded-lg px-3 py-2 animate-float">
-                <span className="text-sm font-medium text-violet-400">
-                  React / TypeScript
-                </span>
-              </div>
-              <div
-                className="absolute -bottom-4 -left-4 glass rounded-lg px-3 py-2 animate-float"
-                style={{
-                  animationDelay: "-1s",
-                }}
-              >
-                <span className="text-sm font-medium text-orange-400">
-                  Rails APIs
-                </span>
-              </div>
-              <div
-                className="absolute top-1/2 -right-8 glass rounded-lg px-3 py-2 animate-float"
-                style={{
-                  animationDelay: "-2s",
-                }}
-              >
-                <span className="text-sm font-medium text-teal-400">
-                  Learning Go
-                </span>
-              </div>
-            </div>
-          </div>
+        <p className="text-xl md:text-2xl text-gray-600 mb-8 font-light">
+          Frontend Developer & Builder of Beautiful Interfaces
+        </p>
+
+        <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+          I craft digital experiences that blend aesthetic beauty with
+          functional excellence, transforming ideas into interactive realities
+          that users love.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <span className="bg-gradient-to-r from-purple-primary to-pink-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 inline-flex items-center cursor-pointer">
+            View My Work
+            <i className="fa-solid fa-arrow-right ml-2"></i>
+          </span>
+          <span className="border-2 border-purple-primary text-purple-primary px-8 py-4 rounded-full font-semibold hover:bg-purple-primary hover:text-white transition-all duration-300 inline-flex items-center cursor-pointer">
+            Get In Touch
+            <i className="fa-solid fa-envelope ml-2"></i>
+          </span>
+        </div>
+
+        <div className="mt-16 flex justify-center space-x-8">
+          <span className="text-gray-400 hover:text-purple-primary transition-colors duration-300 cursor-pointer">
+            <i className="fa-brands fa-github text-2xl"></i>
+          </span>
+          <span className="text-gray-400 hover:text-purple-primary transition-colors duration-300 cursor-pointer">
+            <i className="fa-brands fa-linkedin text-2xl"></i>
+          </span>
+          <span className="text-gray-400 hover:text-purple-primary transition-colors duration-300 cursor-pointer">
+            <i className="fa-brands fa-twitter text-2xl"></i>
+          </span>
+          <span className="text-gray-400 hover:text-purple-primary transition-colors duration-300 cursor-pointer">
+            <i className="fa-brands fa-dribbble text-2xl"></i>
+          </span>
         </div>
       </div>
     </section>
