@@ -1,60 +1,44 @@
-import { useNavigate } from "react-router-dom";
-
 const Navbar = () => {
-  const navigate = useNavigate();
   return (
-    <nav
+    <header
       id="header"
-      className="sticky top-0 z-50 backdrop-blur-md bg-ink/80 border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="text-2xl font-display font-bold gradient-text">
-              PR
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <span
-              className="text-slate-300 hover:text-white transition-colors relative group cursor-pointer"
-              onClick={() => navigate("/")}
-            >
+      <nav className="max-w-7xl mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          <div className="text-2xl font-bold text-gray-900">Peter Robert</div>
+          <div className="hidden md:flex space-x-8">
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
             </span>
-            <span
-              className="text-slate-300 hover:text-white transition-colors relative group cursor-pointer"
-              onClick={() => navigate("/projects")}
-            >
-              Projects
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
-            </span>
-
-            <span
-              className="text-slate-300 hover:text-white transition-colors relative group cursor-pointer"
-              onClick={() => navigate("/about")}
-            >
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-orange-500 group-hover:w-full transition-all duration-300"></span>
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Projects
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Skills
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Experience
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Testimonials
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Blog
+            </span>
+            <span className="text-gray-700 hover:text-purple-primary transition-colors duration-300 font-medium cursor-pointer">
+              Contact
             </span>
           </div>
-
-          <div className="flex items-center space-x-4">
-            <span className="magnetic bg-gradient-to-r from-violet-500 to-orange-500 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/25 transition-all cursor-pointer">
-              Hire Me
-            </span>
-            <button className="p-2 text-slate-400 hover:text-white transition-colors">
-              <i className="fa-solid fa-moon"></i>
-            </button>
-          </div>
-
-          <button className="md:hidden p-2 text-slate-400 hover:text-white">
-            <i className="fa-solid fa-bars"></i>
+          <button className="md:hidden text-gray-700">
+            <i className="fa-solid fa-bars text-xl"></i>
           </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

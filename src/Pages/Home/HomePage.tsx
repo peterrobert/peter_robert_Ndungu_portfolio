@@ -1,3 +1,4 @@
+import photoImage from "../../../public/peter_image.jpg";
 const HomePage = () => {
   return (
     <section
